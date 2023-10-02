@@ -30,9 +30,21 @@ function populateList(){
     // create a new html element
     // set its internal text value to the data value
     // append the new html to the ol list
-    for(let i = 0; i < data.length; i++){
+    for(let item of data){
         let listItem = document.createElement("li");
-        listItem.innerText = data[i];
+        listItem.innerText = item;
         ol.appendChild(listItem);
     }
+
+    data.forEach(() => {
+        console.log("printing item: "+item)
+    });
+
+}
+let printItem = () => {
+    console.log("printing item: "+item)
+}
+
+let arrowFunc = () => {
+    // this is the exact same thing as writing the function above
 }
